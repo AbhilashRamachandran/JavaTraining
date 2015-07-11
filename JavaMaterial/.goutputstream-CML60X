@@ -1,0 +1,1053 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Java Training</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+    <div class="slides" backgroundTransition="slide">
+        <!-- set this for data-background="#c0c0c0" -->
+        <section data-transition="linear">
+            <section data-transition="linear">
+                <h2>Java Training</h2>
+
+                <p>
+                    Trainer : Abhilash Ramachandran<br>
+                    Email : abhilash.r@outlook.com
+                </p>
+            </section>
+            <section id="themes">
+                <h2>Themes</h2>
+
+                <p>
+                    Use any of these built in themes: <br>
+                    <a href="?#/themes">Default</a> -
+                    <a href="?theme=sky#/themes">Sky</a> -
+                    <a href="?theme=beige#/themes">Beige</a> -
+                    <a href="?theme=simple#/themes">Simple</a> -
+                    <a href="?theme=serif#/themes">Serif</a> -
+                    <a href="?theme=night#/themes">Night</a> <br>
+                    <a href="?theme=moon.css#/themes">Moon</a> -
+                    <a href="?theme=simple.css#/themes">Simple</a> -
+                    <a href="?theme=solarized.css#/themes">Solarized</a>
+                </p>
+            </section>
+
+            <section id="transitions">
+                <h2>Transition Styles</h2>
+
+                <p>
+                    You can select from different transitions, like: <br>
+                    <a href="?transition=cube#/transitions">Cube</a> -
+                    <a href="?transition=page#/transitions">Page</a> -
+                    <a href="?transition=concave#/transitions">Concave</a> -
+                    <a href="?transition=zoom#/transitions">Zoom</a> -
+                    <a href="?transition=linear#/transitions">Linear</a> -
+                    <a href="?transition=fade#/transitions">Fade</a> -
+                    <a href="?transition=none#/transitions">None</a> -
+                    <a href="?#/transitions">Default</a>
+                </p>
+            </section>
+        </section>
+
+        <section data-transition="linear">
+            <section data-transition="linear">
+                <h2>Java History and Overview</h2>
+            </section>
+
+            <section data-transition="linear">
+                Java was conceived by
+                <br>
+                <UL>
+                    <LI>James Gosling</LI>
+                    <LI>Patrick Naughton</LI>
+                    <LI>Chris Warth</LI>
+                    <LI>Ed Frank</LI>
+                    <LI>Mike Sheridan</LI>
+                    <LI>at Sun Microsystems, Inc. in 1991</LI>
+                </UL>
+
+            </section>
+            <section data-transition="linear">
+                Major Class Versions of Various JDK . Following are the major version of class file format in standard
+                JDK environment.
+                <br>
+                <UL>
+                    <LI>JDK 1.1 = 45</LI>
+                    <LI>JDK 1.2 = 46</LI>
+                    <LI>JDK 1.3 = 47</LI>
+                    <LI>JDK 1.4 = 48</LI>
+                    <LI>JDK 1.5 = 49</LI>
+                    <LI>JDK 1.6 = 50</LI>
+                </UL>
+
+            </section>
+
+            <section>
+                <h3>Hello World</h2>
+					<pre><code data-trim contenteditable>
+                        package language.fundamentals;
+
+                        public class Literals {
+                        public static void main(String[] args) {
+                        showTypeSizes();
+                        }
+
+                        public static void showTypeSizes() {
+                        System.out.println("Byte "+Byte.MIN_VALUE +"to "+Byte.MAX_VALUE);
+                        System.out.println("Short "+Short.MIN_VALUE +"to "+Short.MAX_VALUE);
+                        System.out.println("Integer "+Integer.MIN_VALUE +"to "+Integer.MAX_VALUE);
+                        System.out.println("Long "+Long.MIN_VALUE +"to "+Long.MAX_VALUE);
+                        }
+                        }
+                    </code></pre>
+                    <h3>Output is </h3>
+					<pre>
+Byte -128to 127
+Short -32768to 32767
+Integer -2147483648to 2147483647
+Long -9223372036854775808to 9223372036854775807
+</pre>
+                    <p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.
+                    </p>
+            </section>
+
+            <section data-transition="linear">
+                <h3>Java Integer Types.</h3>
+                <UL>
+                    <LI>byte 8 bits</LI>
+                    <LI>short 16 bits</LI>
+                    <LI>int 32 bits</LI>
+                    <LI>long 64 bits</LI>
+                </UL>
+            </section>
+
+            <section data-transition="linear">
+                <h3>Java Floating-Point Types.</h3>
+                <UL>
+                    <LI>float 32 bits</LI>
+                    <LI>double 64 bits</LI>
+                </UL>
+							<pre><code data-trim contenteditable>
+                                float f = 1.5f;
+                                double d = 1.5;
+                            </code>
+							</pre>
+            </section>
+            <section data-transition="linear">
+                <h3>Character Types.</h3>
+                <UL>
+                    <LI>char 16 bits</LI>
+                </UL>
+
+							<pre><code data-trim contenteditable>
+                                char ch ='c';
+                            </code>
+
+							</pre>
+                <h3>Boolean</h3>
+                <UL>
+                    <LI>size ? home work</LI>
+                </UL>
+
+							<pre><code data-trim contenteditable>
+                                boolean b = true;
+                            </code>
+
+							</pre>
+            </section>
+            <section data-transition="linear">
+                <h3>Character Types.</h3>
+                <UL>
+                    <LI>char 16 bits</LI>
+                </UL>
+
+							<pre><code data-trim contenteditable>
+                                char ch ='c';
+                            </code>
+
+							</pre>
+                <h3>Boolean</h3>
+                <UL>
+                    <LI>size ? home work</LI>
+                </UL>
+
+							<pre><code data-trim contenteditable>
+                                boolean b = true;
+                            </code>
+
+							</pre>
+            </section>
+        </section>
+        <section data-transition="linear">
+            <section data-transition="linear">
+                <h3>Operators</h3>
+            </section>
+            <section data-transition="linear">
+                <h3> Arithmetic Operators </h3>
+                Arithmetic operators are used in mathematical expressions in the same way that they are
+                used in algebra. The following table lists the arithmetic operators:
+				 <img width="700" height="400" src="/home/smitha/Desktop/JavaTraining/JavaMaterial/images/arithmetic operators.png" alt="Unicorn">
+            </section>
+            <section data-transition="linear">
+                The following simple example program demonstrates the arithmetic operators. It also
+                illustrates the difference between floating-point division and integer division.
+						<pre><code data-trim contenteditable>
+                            // Demonstrate the basic arithmetic operators.
+                            class BasicMath {
+                            public static void main(String args[]) {
+                            // arithmetic using integers
+                            System.out.println("Integer Arithmetic");
+                            int a = 1 + 1;
+                            int b = a * 3;
+                            int c = b / 4;
+                            int d = c - a;
+                            int e = -d;
+                            System.out.println("a = " + a);
+                            System.out.println("b = " + b);
+                            System.out.println("c = " + c);
+                            System.out.println("d = " + d);
+                            System.out.println("e = " + e);
+                            // arithmetic using doubles
+                            System.out.println("\nFloating Point Arithmetic");
+                            double da = 1 + 1;
+                            double db = da * 3;
+                            double dc = db / 4;
+                            double dd = dc - a;
+                            double de = -dd;
+                            System.out.println("da = " + da);
+                            System.out.println("db = " + db);
+                            System.out.println("dc = " + dc);
+                            System.out.println("dd = " + dd);
+                            System.out.println("de = " + de);
+                            }
+                            }
+                            When you run this program, you will see the following output:
+                            Integer Arithmetic
+                            a = 2
+                            b = 6
+                            c = 1
+                            d = -1
+                            e = 1
+                            Floating Point Arithmetic
+                            da = 2.0
+                            db = 6.0
+                            dc = 1.5
+                            dd = -0.5
+                            de = 0.5
+                        </code>
+							</pre>
+            </section>
+            <section data-transition="linear">
+                <h3> The Modulus Operator</h3>
+                The modulus operator, %, returns the remainder of a division operation. Following
+                program demonstrates the %.
+						 <pre><code data-trim contenteditable>
+                             class Modulus {
+                             public static void main(String args[]) {
+                             int x = 42;
+                             double y = 42.25;
+                             System.out.println("x mod 10 = " + x % 10);
+                             System.out.println("y mod 10 = " + y % 10);
+                             }
+                             }
+                             When you run this program, you will get the following output:
+                             x mod 10 = 2
+                             y mod 10 = 2.25
+                         </code>
+						 </pre>
+            </section>
+            <section data-transition="linear">
+                <h3> Arithmetic Compound Assignment Operators </h3>
+
+                Java provides special operators that can be used to combine an arithmetic operation with
+                an assignment.
+
+                <LI>a = a + 4 can be written as a+=4</LI>
+                <LI>a = a % 2 can be written as a%=2</LI>
+            </section>
+            <section data-transition="linear">
+                Following program demonstrates assignment operators
+						<pre><code data-trim contenteditable>
+                            class OpEquals {
+                            public static void main(String args[]) {
+                            int a = 1;
+                            int b = 2;
+                            int c = 3;
+                            a += 5;
+                            b *= 4;
+                            c += a * b;
+                            c %= 6;
+                            System.out.println("a = " + a);
+                            System.out.println("b = " + b);
+                            System.out.println("c = " + c);
+                            }
+                            }
+                            The output of this program is shown here:
+                            a = 6
+                            b = 8
+                            c = 3
+                        </code>
+						 </pre>
+            </section>
+            <section data-transition="linear">
+                <h3> Increment and Decrement</h3>
+                The increment operator increases its operand by one. The decrement operator
+                decreases its operand by one.<br>
+                Following program demonstrates this concept
+						<pre><code data-trim contenteditable>
+                            class IncDec {
+                            public static void main(String args[]) {
+                            int a = 1;
+                            int b = 2;
+                            int c;
+                            int d;
+                            c = ++b;
+                            d = a++;
+                            c++;
+                            System.out.println("a = " + a);
+                            System.out.println("b = " + b);
+                            System.out.println("c = " + c);
+                            System.out.println("d = " + d);
+                            }
+                            }
+                            The output of this program follows:
+                            a = 2
+                            b = 3
+                            c = 4
+                            d = 1
+
+                        </code>
+						 </pre>
+            </section>
+            <section data-transition="linear">
+                <h3>The Bitwise Operators</h3>
+                These operators act upon the individual bits of their operands.
+                <UL>
+                    <LI>~ Bitwise unary NOT</LI>
+                    <LI>& Bitwise AND</LI>
+                    <LI>| Bitwise OR</LI>
+                    <LI>^ Bitwise exclusive OR</LI>
+                    <LI>>> Shift right</LI>
+                    <LI>>>> Shift right zero fill</LI>
+                    <LI><< Shift left</LI>
+                    <LI>&= Bitwise AND assignment</LI>
+                    <LI>|= Bitwise OR assignment</LI>
+                    <LI>^= Bitwise exclusive OR assignment</LI>
+                    <LI>>>= Shift right assignment</LI>
+                    <LI>>>>= Shift right zero fill assignment</LI>
+                    <LI><<= Shift left assignment</LI>
+                </UL>
+            </section>
+
+            <section data-transition="linear">
+                <h3>Relational Operators</h3>
+                The relational operators determine the relationship that one operand has to the other.<br>
+                The relational operators are shown here:
+                <UL>
+                <LI>== Equal to</LI>
+                <LI>!= Not equal to </LI>
+                <LI> > Greater than </LI>
+                <LI>< Less than </LI>
+                <LI>>= Greater than or equal to</LI>
+                <LI><= Less than or equal to </LI>
+                </UL>
+            </section>
+			<section data-transition="linear">
+				<h3>Boolean Logical Operators</h3>
+					<UL>
+					<LI>& Logical AND</LI>
+					<LI>| Logical OR</LI>
+					<LI>^ Logical XOR (exclusive OR)</LI>
+					<LI>|| Short-circuit OR</LI>
+					<LI>&& Short-circuit AND</LI>
+					<LI>! Logical unary NOT</LI>
+					<LI>&= AND assignment</LI>
+					<LI>|= OR assignment</LI>
+					<LI>^= XOR assignment</LI>
+					<LI>== Equal to</LI>
+					<LI>!= Not equal to</LI>
+					<LI>?: Ternary if-then-else </LI>
+					</UL>
+				</section>
+				<section data-transition = "linear">
+					Demonstrate the boolean logical operators:
+					<pre><code data-trim contenteditable>
+						class BoolLogic {
+public static void main(String args[]) {
+boolean a = true;
+boolean b = false;
+boolean c = a | b;
+boolean d = a & b;
+boolean e = a ^ b;
+boolean f = (!a & b) | (a & !b);
+boolean g = !a;
+System.out.println("  a = " + a);
+System.out.println("  b = " + b);
+System.out.println("  a|b = " + c);
+System.out.println("  a&b = " + d);
+System.out.println("  a^b = " + e);
+System.out.println("  !a&b|a&!b = " + f);
+System.out.println("  !a= " + g);
+}
+}
+						</code>
+					</pre>
+				</section>
+				<section data-transition = "linear">
+					<h4>Output of the previous program is as follows:</h4>
+					<UL>
+					 <LI>a = true </LI>
+					 <LI>b = false </LI>
+					 <LI>a|b = true </LI>
+					 <LI>a&b = false </LI>
+					 <LI>a^b = true </LI>
+					 <LI>!a&b|a&!b = true </LI>
+					 <LI>!a = false </LI>
+					 </UL>
+				</section>
+				<section data-transition = "linear">
+					<h3>Short-Circuit Logical Operators</h3>
+						||  and   &&  are short circuit logical operators. <br>
+						Java will not bother to evaluate the right-
+						hand operand when the outcome of the expression can be determined by the left operand alone.
+
+						<pre><code data-trim contenteditable>
+							//prevents run time exception
+							if (denom != 0 && num / denom > 10)
+							</code>
+						</pre>
+				</section>
+				<section data-transition = "linear">
+					<h3>The Assignment Operator</h3>
+						<i>var = expression;</i><br>
+						You can create chain of assignments.
+						<pre><code data-trim contenteditable>
+							int x, y, z;
+x = y = z = 100; // set x, y, and z to 100
+							</code>
+						</pre>
+				</section>
+				<section data-transition = "linear">
+					<h3>The ? Operator</h3>
+						<i>expression1 ? expression2 : expression3</i><br>
+						If expression1 is true, then expression2 is evaluated; otherwise, expression3 is evaluated
+						<pre><code data-trim contenteditable>
+							// Demonstrate ?.
+						class Ternary {
+						public static void main(String args[]) {
+						int i, k;
+						i = 10;
+						k = i < 0 ? -i : i; // get absolute value of i
+						System.out.print("Absolute value of ");
+						System.out.println(i + " is " + k);
+						i = -10;
+						k = i < 0 ? -i : i; // get absolute value of i
+						System.out.print("Absolute value of ");
+						System.out.println(i + " is " + k);
+						}
+						}
+						*****************
+						The output generated by the program is shown here:
+						Absolute value of 10 is 10
+						Absolute value of -10 is 10
+							</code>
+
+						</pre>
+				</section>
+				<section data-transition = "linear">
+					<h3>Operator Precedence</h3>
+					<img width="700" height="600" src="/home/smitha/Desktop/JavaTraining/JavaMaterial/images/operator precedence.png" alt="Unicorn">
+				</section>
+				<section data-transition = "linear">
+					<h3>Using Parantheses</h3>
+					Parentheses raise the precedence of the operations that are inside them
+						<pre><code data-trim contenteditable>
+								a >> b + 3
+This expression first adds 3 to b and then shifts a right by that result. That is, this
+expression can be rewritten using redundant parentheses like this:
+a >> (b + 3)
+However, if you want to first shift a right by b positions and then add 3 to that result, you
+will need to parenthesize the expression like this:
+(a >> b) + 3
+							</code>
+						</pre>
+				</section>
+        </section>
+
+        </section>
+        </section>
+        <section data-transition = "linear">
+			<section data-transition = "linear">
+			<h3>Control Statements</h3>
+			</section>
+			<section data-transition = "linear">
+				<i>IF statement</i>
+				<pre><code data-trim contenteditable>
+					int a, b;
+//single statement after if /else
+if(a < b) a = 0;
+else b = 0;
+
+//multiple statements after if/else
+if (bytesAvailable > 0) {
+ProcessData();
+bytesAvailable -= n;
+}
+else{
+waitForMoreData();
+bytesAvailable = n;
+}
+					</code>
+				</pre>
+			</section>
+			<section data-transition = "linear">
+				<h3><i>Nested ifs</i></h3>
+				A nested if is an if statement that is the target of another if or else
+				<pre><code data-trim contenteditable>
+					if(i == 10) {
+if(j < 20) a = b;
+if(k > 100) c = d; // this if is
+else a = c;// associated with this else
+}
+else a = d;// this else refers to if(i == 10)
+					</code>
+				</pre>
+			</section>
+			<section data-transition = "linear">
+				<i>The if-else-if ladder</i><br>
+				Below is an example of if-else-if statement usage.
+				<pre><code data-trim contenteditable>
+					class IfElse {
+public static void main(String args[]) {
+int month = 4; // April
+String season;
+if(month == 12 || month == 1 || month == 2)
+season = "Winter";
+else if(month == 3 || month == 4 || month == 5)
+season = "Spring";
+else if(month == 6 || month == 7 || month == 8)
+season = "Summer";
+else if(month == 9 || month == 10 || month == 11)
+season = "Autumn";
+else
+season = "Bogus Month";
+System.out.println("April is in the " + season + ".");
+}
+}
+
+Here is the output produced by the program:
+April is in the Spring.
+					</code>
+				</pre>
+			</section>
+			<section data-transition = "linear">
+				<h3><i>switch</i><br></h3>
+				The switch statement is Java’s multiway branch statement.<br>Below is an example:
+				<pre><code data-trim contenteditable>
+				// A simple example of the switch.
+class SampleSwitch {
+public static void main(String args[]) {
+for(int i=0; i<6; i++)
+switch(i) {
+case 0:
+System.out.println("i is zero.");
+break;
+case 1:
+System.out.println("i is one.");
+break;
+case 2:
+System.out.println("i is two.");
+break;
+case 3:
+System.out.println("i is three.");
+break;
+default:
+System.out.println("i is greater than 3.");
+}
+}
+}
+
+The output produced by this program is shown here:
+i is zero.
+i is one.
+i is two.
+i is three.
+is is greater than 3.
+is is greater than 3.
+					</code>
+				</pre>
+			</section>
+			<section data-transition = "linear">
+				<i>break</i><br>
+				The break statement is optional. If you omit the break, execution will continue on into the
+next case.
+				<pre><code data-trim contenteditable>
+				// In a switch, break statements are optional.
+class MissingBreak {
+public static void main(String args[]) {
+for(int i=0; i<12; i++)
+switch(i) {
+case 0:
+case 1:
+case 2:
+case 3:
+case 4:
+System.out.println("i is less than 5");
+break;
+case 5:
+case 6:
+case 7:
+case 8:
+case 9:
+System.out.println("i is less than 10");
+break;
+default:
+System.out.println("i is 10 or more");
+}
+}
+}
+This program generates the following output:
+i is less than 5
+i is less than 5
+i is less than 5
+i is less than 5
+i is less than 5
+i is less than 10
+i is less than 10
+i is less than 10
+i is less than 10
+i is less than 10
+i is 10 or more
+i is 10 or more
+
+					</code>
+				</pre>
+				CTD...
+			</section>
+			<section data-transition = "linear">
+			Beginning with JDK 7, you can use a string to control a switch statement.
+				<pre><code data-trim contenteditable>
+					class StringSwitch {
+public static void main(String args[]) {
+String str = "two";
+switch(str) {
+case "one":
+System.out.println("one");
+break;
+case "two":
+System.out.println("two");
+break;
+case "three":
+System.out.println("three");
+break;
+default:
+System.out.println("no match");
+break;
+}
+}
+}
+
+Output is "two"
+					</code>
+				</pre>
+			</section>
+
+			<section data-transition = "linear">
+				<h3>Nested switch Statements</h3>
+				You can use a switch as part of the statement sequence of an outer switch
+				<pre><code data-trim contenteditable>
+					switch(count) {
+case 1:
+switch(target) { // nested switch
+case 0:
+System.out.println("target is zero");
+break;
+case 1: // no conflicts with outer switch
+System.out.println("target is one");
+break;
+}
+break;
+case 2: // ...
+					</code>
+				</pre>
+			</section>
+			<section data-transition = "linear">
+				<h3>Iteration Statements</h3>
+			</section>
+			<section data-transition = "linear">
+				<h3>while statement</h3>
+			<pre><code data-trim contenteditable>
+				class While {
+public static void main(String args[]) {
+int n = 10;
+while(n > 0) {
+System.out.println("tick " + n);
+n--;
+}
+}
+}
+
+When you run this program, it will “tick” ten times:
+tick 10
+tick 9
+tick 8
+tick 7
+tick 6
+tick 5
+tick 4
+tick 3
+tick 2
+tick 1
+*************************************************************
+// The target of a loop can be empty.
+class NoBody {
+public static void main(String args[]) {
+int i, j;
+i = 100;
+j = 200;
+// find midpoint between i and j
+while(++i < --j); // no body in this loop
+System.out.println("Midpoint is " + i);
+}
+}
+This program finds the midpoint between i and j. It generates the following output:
+Midpoint is 150
+
+				</code>
+			</pre>
+			</section>
+			<section data-transition = "linear">
+				<i>do-while statement</i>
+				<pre><code data-trim contenteditable>
+				// Demonstrate the do-while loop.
+class DoWhile {
+public static void main(String args[]) {
+int n = 10;
+do {
+System.out.println("tick " + n);
+n--;
+} while(n > 0);
+}
+}
+				</code>
+			</pre>
+		</section>
+	</section>		<!--control statement section-->
+	<section data-transition = "linear">
+			<section data-transition = "linear">
+				<h3>Introduction to Classes</h3>
+			</section>
+			<section data-transition = "linear">
+				<h3>General Form of Class</h3>
+				A class is declared by use of the class keyword<br>
+				An example of a simple class is below:
+				<pre><code data-trim contenteditable>
+						class classname {
+type instance-variable1;
+type instance-variable2;
+// ...
+type instance-variableN;
+type methodname1(parameter-list) {
+// body of method
+}
+type methodname2(parameter-list) {
+// body of method
+}
+// ...
+type methodnameN(parameter-list) {
+// body of method
+}
+}
+					</code>
+				</pre>
+			</section>
+			<section data-transition = "linear">
+				<i>A Simple Class</i>
+				<pre><code data-trim contenteditable>
+					//New datatype is called Box. It acts as a template.
+class Box {
+double width;
+double height;
+double depth;
+}
+
+//To actually create a Box object, you will use a statement like the following:
+Box mybox = new Box(); // create a Box object called mybox
+
+//To assign the width variable of mybox the value 100, you would use the following statement:
+mybox.width = 100;
+					</code>
+				</pre>
+			</section>
+			<section data-transition = "linear">
+				Here is a complete program that uses the Box class:
+				<pre><code data-trim contenteditable>
+					/* A program that uses the Box class.
+Call this file BoxDemo.java
+*/
+class Box {
+double width;
+double height;
+double depth;
+}
+// This class declares an object of type Box.
+class BoxDemo {
+public static void main(String args[]) {
+Box mybox = new Box();
+double vol;
+// assign values to mybox's instance variables
+mybox.width = 10;
+mybox.height = 20;
+mybox.depth = 15;
+// compute volume of box
+vol = mybox.width * mybox.height * mybox.depth;
+System.out.println("Volume is " + vol);
+}
+}
+					</code>
+				</pre>
+			</section>
+			<section data-transition = "linear">
+				<h3><i>Some important points</i></h3>
+				<UL>
+					<LI>You should call the file that contains this program BoxDemo.java, because the main( )
+method is in the class called BoxDemo, not the class called Box</LI>
+					<LI>When you compile the previous code,you will find that two .class files have been created, one for Box and one for
+BoxDemo</LI>
+					<LI>The Java compiler automatically puts each class into its own .class file</LI>
+				</UL>
+			</section>
+
+		</section> <!--Class section-->
+
+      <section data-transition = "linear">
+
+        <section data-transition = "linear">
+          <h3>Exception Handling</h3>
+        </section>
+
+        <section data-transition = "linear">
+            <h3>Exception-Handling Fundamentals</h3>
+            Java exception handling is managed via five keywords:<br>
+            <UL>
+               <LI>try</LI>
+               <LI>catch</LI>
+               <LI>throw </LI>
+               <LI>throws</LI>
+               <LI>finally</LI>
+      </UL>
+      </section>
+
+        <section data-transition = "linear">
+          This is the general form of an exception-handling block:
+            <pre><code data-trim contenteditable>
+
+try {
+// block of code to monitor for errors
+}
+catch (ExceptionType1 exOb) {
+// exception handler for ExceptionType1
+}
+catch (ExceptionType2 exOb) {
+// exception handler for ExceptionType2
+}
+// ...
+finally {
+// block of code to be executed after try block ends
+}
+            </code>
+          </pre>
+        </section>
+        <section data-transition = "linear">
+          <h3>Uncaught Exceptions</h3>
+          <pre><code data-trim contenteditable>
+            class Exc0 {
+public static void main(String args[]) {
+int d = 0;
+int a = 42 / d;
+}
+}
+          </code>
+        </pre>
+      <UL>
+        <LI>The default handler displays a string describing the exception</LI>
+        <LI>Prints a stack trace from the point at which the exception occurred, and terminates the program.</LI>
+        <LI>java.lang.ArithmeticException: / by zero
+at Exc0.main(Exc0.java:4) </LI>
+      </UL>
+        </section>
+        <section data-transition = "linear">
+          <h3>Using try and catch</h3>
+          <pre><code data-trim contenteditable>
+            class Exc2 {
+public static void main(String args[]) {
+int d, a;
+try { // monitor a block of code.
+d = 0;
+a = 42 / d;
+System.out.println("This will not be printed.");
+} catch (ArithmeticException e) { // catch divide-by-zero error
+System.out.println("Division by zero.");
+}
+System.out.println("After catch statement.");
+}
+}
+          </code>
+        </pre>
+        This program generates the following output:<br>
+Division by zero.<br>
+After catch statement.
+        </section>
+        <section data-transition = "linear">
+			Handle an exception and move on.Below is the example:
+			<pre><code data-trim contenteditable>
+				import java.util.Random;
+class HandleError {
+public static void main(String args[]) {
+int a=0, b=0, c=0;
+Random r = new Random();
+for(int i=0; i<32000; i++) {
+try {
+b = r.nextInt();
+c = r.nextInt();
+a = 12345 / (b/c);
+} catch (ArithmeticException e) {
+System.out.println("Division by zero.");
+a = 0; // set a to zero and continue
+}
+System.out.println("a: " + a);
+}
+}
+}
+				</code>
+			</pre>
+			</section>
+			<section data-transition = "linear">
+			<h3>Multiple catch Clauses</h3>	
+			In some cases, more than one exception could be raised by a single piece of code.
+			<pre><code data-trim contenteditable>
+				class MultipleCatches {
+public static void main(String args[]) {
+try {
+int a = args.length;
+System.out.println("a = " + a);
+int b = 42 / a;
+int c[] = { 1 };
+c[42] = 99;
+} catch(Arit
+hmeticException e) {
+System.out.println("Divide by 0: " + e);
+} catch(ArrayIndexOutOfBoundsException e) {
+System.out.println("Array index oob: " + e);
+}
+System.out.println("After try/catch blocks.");
+}
+}
+*****************************************************
+
+Here is the output generated by running it both ways:
+C:\>java MultipleCatches
+a = 0
+Divide by 0: java.lang.ArithmeticException: / by zero
+After try/catch blocks.
+C:\>java MultipleCatches TestArg
+a = 1
+Array index oob: java.lang.ArrayIndexOutOfBoundsException:42
+After try/catch blocks.
+
+				</code>
+			</pre>	
+			</section>
+			<section data-transition = "linear">
+				
+			</section>
+      </section> <!--Exception handling section-->
+
+    </div>
+</div>
+
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {
+                src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
